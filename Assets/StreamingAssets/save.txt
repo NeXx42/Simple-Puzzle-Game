@@ -1,0 +1,75 @@
+{
+    "totalTime": 20.685379028320314,
+    "pushCount": 14,
+    "pointCount": 23,
+    "mapSize": {
+        "x": 15,
+        "y": 15
+    },
+    "savedMap": [
+        {
+            "pos": {
+                "x": 0,
+                "y": 9
+            },
+            "type": 0,
+            "hasPlayerOn": false
+        },
+        {
+            "pos": {
+                "x": 4,
+                "y": 3
+            },
+            "type": 0,
+            "hasPlayerOn": false
+        },
+        {
+            "pos": {
+                "x": 7,
+                "y": 5
+            },
+            "type": 1,
+            "hasPlayerOn": false
+        },
+        {
+            "pos": {
+                "x": 9,
+                "y": 3
+            },
+            "type": 3,
+            "hasPlayerOn": false
+        },
+        {
+            "pos": {
+                "x": 10,
+                "y": 14
+            },
+            "type": 0,
+            "hasPlayerOn": false
+        },
+        {
+            "pos": {
+                "x": 12,
+                "y": 2
+            },
+            "type": 0,
+            "hasPlayerOn": false
+        },
+        {
+            "pos": {
+                "x": 13,
+                "y": 4
+            },
+            "type": 2,
+            "hasPlayerOn": false
+        },
+        {
+            "pos": {
+                "x": 14,
+                "y": 11
+            },
+            "type": 0,
+            "hasPlayerOn": false
+        }
+    ]
+}
