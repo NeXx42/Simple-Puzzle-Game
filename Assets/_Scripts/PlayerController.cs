@@ -7,20 +7,38 @@ public class PlayerController : MapPresence
     [Header("Camera")]
     [SerializeField] private float cameraLerp = 5f;
 
+    [Header("Misc")]
+    [SerializeField] private Color[] lvlColours;
+    [SerializeField] private float scaleIncreasePerLvl = 1.3f;
+
     [Header("References")]
     [SerializeField] private Transform cameraTransform;
     [SerializeField] private Transform playerTransform;
+
+    private MaterialPropertyBlock matProps;
+    private MeshRenderer matRend;
+
 
     private void Awake()
     {
         objectType = ObjectTypes.Player;
         moveable = playerTransform;
 
+        matRend = playerTransform.GetComponent<MeshRenderer>();
+        matProps = new MaterialPropertyBlock();
+
         GameManager.onGameLoad += Setup;
     }
 
     private void Setup()
     {
+        GameManager.scoreCallback += (x, lvl) =>
+        {
+            matProps.SetColor("_Color", lvlColours[Mathf.Min(lvl, lvlColours.Length - 1)]);
+            matRend.SetPropertyBlock(matProps);
+
+            playerTransform.localScale = Vector3.one * Mathf.Pow(scaleIncreasePerLvl, lvl);
+        };
         MoveTo(GameManager.instance.GetPlayerSpawn(this));
     }
 

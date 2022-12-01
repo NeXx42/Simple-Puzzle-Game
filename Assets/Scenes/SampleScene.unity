@@ -797,6 +797,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   offset: {x: 0, y: 1, z: 0}
   cameraLerp: 5
+  lvlColours:
+  - {r: 0.9593928, g: 1, b: 0, a: 0}
+  - {r: 1, g: 0.739583, b: 0, a: 0}
+  - {r: 1, g: 0.52214503, b: 0, a: 0}
+  - {r: 1, g: 0, b: 0, a: 0}
+  scaleIncreasePerLvl: 1.3
   cameraTransform: {fileID: 963194228}
   playerTransform: {fileID: 1764176619}
 --- !u!4 &866221060

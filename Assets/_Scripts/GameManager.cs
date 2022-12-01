@@ -129,19 +129,18 @@ public class GameManager : MonoBehaviour
             plrSpawn = GetRandomEmptySection();
         }
 
-        // recall callbacks to reset ui
-
-        scoreCallback?.Invoke(score, lvl);
-        pushCallback?.Invoke(pushCount);
-        gameTimeCallback?.Invoke(gameTime);
-
-
         // load rest of dependencies
 
         onGameLoad?.Invoke();
         onGameLoad = null;
 
         hasStarted = true;
+
+        // recall callbacks to reset ui
+
+        scoreCallback?.Invoke(score, lvl);
+        pushCallback?.Invoke(pushCount);
+        gameTimeCallback?.Invoke(gameTime);
     }
 
 
@@ -431,7 +430,7 @@ public class GameManager : MonoBehaviour
         if (lastPushed && lastPushed == interatable)
         {
             // not sure what "one by one the score decreases on double value." means but just removing 1 point
-            change -= 1;
+           // change = -1;
         }
 
         lastPushed = interatable;
