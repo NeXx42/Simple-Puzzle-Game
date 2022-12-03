@@ -430,7 +430,7 @@ public class GameManager : MonoBehaviour
         if (lastPushed && lastPushed == interatable)
         {
             // not sure what "one by one the score decreases on double value." means but just removing 1 point
-           // change = -1;
+            change = -1;
         }
 
         lastPushed = interatable;
